@@ -1,20 +1,19 @@
-from http.server import HTTPServer, SimpleHTTPRequestHandler
-import webbrowser
+from flask import Flask, send_file
 import os
 
-def run_server():
-    port = 8000
-    os.chdir(os.path.dirname(os.path.abspath(__file__)))
-    server_address = ('', port)
-    httpd = HTTPServer(server_address, SimpleHTTPRequestHandler)
-    
-    print(f"🚀 Servidor em: http://localhost:{port}")
-    webbrowser.open(f'http://localhost:{port}')
-    
+app = Flask(__name__)
+
+@app.route('/')
+def home():
+    return send_file('index.html')
+
+@app.route('/<path:filename>')
+def serve_files(filename):
     try:
-        httpd.serve_forever()
-    except KeyboardInterrupt:
-        print("\n🛑 Servidor parado")
+        return send_file(filename)
+    except:
+        return "Ficheiro não encontrado", 404
 
 if __name__ == '__main__':
-    run_server()
+    port = int(os.environ.get('PORT', 5000))
+    app.run(host='0.0.0.0', port=port, debug=False)
