@@ -1,0 +1,1054 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Erasmus+ Days 2025 - Valores da UE</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --eu-blue: #003399;
+            --eu-gold: #FFCC00;
+            --accent-color: #e74c3c;
+            --light-blue: #4d79b3;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        
+        .navbar {
+            background-color: white !important;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .navbar-brand img {
+            height: 50px;
+        }
+        
+        .nav-link {
+            color: var(--eu-blue) !important;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-link:hover {
+            color: var(--light-blue) !important;
+        }
+        
+        .hero-section {
+            background: linear-gradient(rgba(0, 51, 153, 0.85), rgba(0, 51, 153, 0.9)), url('https://images.unsplash.com/photo-1585208798036-88d41f0d9d7c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 120px 0;
+            margin-bottom: 60px;
+            text-align: center;
+        }
+        
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+        }
+        
+        .date-badge {
+            background-color: var(--eu-gold);
+            color: var(--eu-blue);
+            font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 50px;
+            display: inline-block;
+            margin-bottom: 30px;
+            font-size: 1.2rem;
+        }
+        
+        .section-title {
+            color: var(--eu-blue);
+            font-weight: 700;
+            margin-bottom: 40px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 80px;
+            height: 4px;
+            background-color: var(--eu-gold);
+        }
+        
+        .value-card {
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+            margin-bottom: 30px;
+            height: 100%;
+            overflow: hidden;
+        }
+        
+        .value-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+        
+        .value-icon {
+            font-size: 3rem;
+            color: var(--eu-blue);
+            margin-bottom: 20px;
+        }
+        
+        .value-title {
+            color: var(--eu-blue);
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+        
+        .eu-colors-bar {
+            height: 10px;
+            background: linear-gradient(to right, #003399, #FFCC00, #003399);
+            margin: 40px 0;
+        }
+        
+        .footer {
+            background-color: var(--eu-blue);
+            color: white;
+            padding: 50px 0 30px;
+        }
+        
+        .footer-logo {
+            height: 70px;
+            margin-bottom: 20px;
+        }
+        
+        .erasmus-quote {
+            font-style: italic;
+            font-size: 1.2rem;
+            color: var(--eu-blue);
+            border-left: 4px solid var(--eu-gold);
+            padding-left: 20px;
+            margin: 40px 0;
+        }
+        
+        .countdown {
+            background-color: var(--eu-blue);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 40px 0;
+        }
+        
+        .countdown-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--eu-gold);
+        }
+        
+        .countdown-label {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+        }
+        
+        .eu-flag {
+            height: 30px;
+            margin-right: 10px;
+        }
+        
+        /* Estilos para depoimentos */
+        .testimonial-card {
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s;
+            margin-bottom: 25px;
+            height: 100%;
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .testimonial-header {
+            background-color: var(--eu-blue);
+            color: white;
+            padding: 15px 20px;
+            border-radius: 15px 15px 0 0;
+        }
+        
+        .testimonial-rating {
+            color: var(--eu-gold);
+        }
+        
+        .testimonial-form {
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            padding: 30px;
+        }
+        
+        .video-testimonial {
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+        
+        .video-testimonial video {
+            width: 100%;
+            border-radius: 15px;
+        }
+        
+        .admin-panel {
+            background-color: #f8f9fa;
+            border: 2px dashed var(--eu-blue);
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 30px;
+        }
+        
+        .admin-badge {
+            background-color: var(--eu-gold);
+            color: var(--eu-blue);
+            font-weight: bold;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.8rem;
+        }
+        
+        .tab-content {
+            background-color: white;
+            border-radius: 0 0 15px 15px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+        
+        .nav-tabs .nav-link {
+            border: none;
+            color: var(--eu-blue);
+            font-weight: 500;
+            padding: 15px 25px;
+        }
+        
+        .nav-tabs .nav-link.active {
+            background-color: var(--eu-blue);
+            color: white;
+            border: none;
+            border-radius: 10px 10px 0 0;
+        }
+        
+        .empty-state {
+            text-align: center;
+            padding: 40px 20px;
+            color: #6c757d;
+        }
+        
+        .empty-state i {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            opacity: 0.5;
+        }
+        
+        .login-modal .modal-content {
+            border-radius: 15px;
+            border: none;
+        }
+        
+        .login-btn {
+            background-color: var(--eu-blue);
+            border: none;
+            border-radius: 50px;
+            padding: 10px 25px;
+            color: white;
+            font-weight: 500;
+        }
+        
+        .user-badge {
+            background-color: var(--eu-gold);
+            color: var(--eu-blue);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: 500;
+        }
+        
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="logo-email.jpg" alt="EPHTL Logo" onerror="this.src='https://via.placeholder.com/150x50/003399/FFFFFF?text=EPHTL+Logo'">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="#valores">Valores da UE</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#erasmus">Erasmus+</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#evento">Evento</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#depoimentos">Depoimentos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contato">Contactos</a></li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <span id="userInfo" class="d-none">
+                            <span class="user-badge me-2">
+                                <i class="fas fa-user me-1"></i>
+                                <span id="userName">Admin</span>
+                            </span>
+                            <button class="btn btn-outline-danger btn-sm" onclick="logout()">
+                                <i class="fas fa-sign-out-alt"></i>
+                            </button>
+                        </span>
+                        <button id="loginBtn" class="btn login-btn" data-bs-toggle="modal" data-bs-target="#loginModal">
+                            <i class="fas fa-sign-in-alt me-2"></i>Login 
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+   <div class="poster-container">
+  <div class="glass-effect"></div>
+  <div class="poster-content">
+    <h1>ERASMUS + DAYS 2025</h1>
+    <p class="date">13 > 18 de Outubro</p>
+    <p class="slogan">Live our values, inspire our future</p>
+    <p class="subtitle">5 dias para fazer a Europa brilhar!</p>
+  </div>
+</div>
+
+<style>
+.poster-container {
+  background-image: url('web_banner.jpg');
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.glass-effect {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(30, 70, 150, 0.3);
+  backdrop-filter: blur(5px) saturate(180%);
+  -webkit-backdrop-filter: blur(5px) saturate(180%);
+  z-index: 1;
+}
+
+.poster-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: white;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Estilos sem fundos pretos - apenas sombras fortes */
+.poster-content h1 {
+  font-size: 4em;
+  font-weight: 900;
+  text-shadow: 
+    3px 3px 8px rgba(0, 0, 0, 0.8),
+    0 0 25px rgba(0, 0, 0, 0.6),
+    0 0 5px rgba(0, 0, 0, 0.4);
+  margin-bottom: 30px;
+  letter-spacing: 3px;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.poster-content .date {
+  font-size: 2.5em;
+  font-weight: 700;
+  text-shadow: 
+    2px 2px 6px rgba(0, 0, 0, 0.8),
+    0 0 20px rgba(0, 0, 0, 0.5);
+  margin-bottom: 25px;
+  /* Removido o fundo preto */
+  padding: 10px 0;
+}
+
+.poster-content .slogan {
+  font-size: 2em;
+  font-weight: 600;
+  text-shadow: 
+    2px 2px 5px rgba(0, 0, 0, 0.8),
+    0 0 15px rgba(0, 0, 0, 0.4);
+  margin-bottom: 20px;
+  font-style: italic;
+  padding: 8px 0;
+}
+
+.poster-content .subtitle {
+  font-size: 1.6em;
+  font-weight: 500;
+  text-shadow: 
+    2px 2px 5px rgba(0, 0, 0, 0.8),
+    0 0 12px rgba(0, 0, 0, 0.4);
+  /* Removido o fundo preto */
+  padding: 12px 0;
+  margin-top: 20px;
+}
+
+/* Melhorias de responsividade */
+@media (max-width: 768px) {
+  .poster-content h1 {
+    font-size: 2.5em;
+    letter-spacing: 2px;
+  }
+  
+  .poster-content .date {
+    font-size: 1.8em;
+  }
+  
+  .poster-content .slogan {
+    font-size: 1.5em;
+  }
+  
+  .poster-content .subtitle {
+    font-size: 1.2em;
+  }
+}
+</style>
+
+    <div class="eu-colors-bar"></div>
+
+    <!-- Valores da UE -->
+    <section id="valores" class="py-5">
+        <div class="container">
+            <h2 class="section-title text-center">Valores da União Europeia</h2>
+            
+            <p class="lead text-center mb-5">A União Europeia assenta em valores fundamentais que definem a sua identidade e missão. Estes valores estão consagrados no artigo 2.º do Tratado de Lisboa e na Carta dos Direitos Fundamentais da UE.</p>
+            
+            <div class="row">
+                <div class="col-md-6 col-lg-4">
+                    <div class="value-card p-4 text-center">
+                        <div class="value-icon">
+                            <i class="fas fa-user-shield"></i>
+                        </div>
+                        <h3 class="value-title">Dignidade Humana</h3>
+                        <p>A dignidade humana é inviolável. Deve ser respeitada, protegida e constitui a verdadeira base dos direitos fundamentais.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                    <div class="value-card p-4 text-center">
+                        <div class="value-icon">
+                            <i class="fas fa-dove"></i>
+                        </div>
+                        <h3 class="value-title">Liberdade</h3>
+                        <p>A liberdade de circulação confere aos cidadãos o direito de circular e residir livremente na União. As liberdades individuais como o respeito pela vida privada, a liberdade de pensamento, de religião, de reunião, de expressão e de informação são protegidas pela Carta dos Direitos Fundamentais da UE.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                    <div class="value-card p-4 text-center">
+                        <div class="value-icon">
+                            <i class="fas fa-vote-yea"></i>
+                        </div>
+                        <h3 class="value-title">Democracia</h3>
+                        <p>O funcionamento da UE assenta na democracia representativa. Qualquer cidadão adulto da UE tem o direito de se candidatar e de votar nas eleições para o Parlamento Europeu.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                    <div class="value-card p-4 text-center">
+                        <div class="value-icon">
+                            <i class="fas fa-balance-scale"></i>
+                        </div>
+                        <h3 class="value-title">Igualdade</h3>
+                        <p>A igualdade consiste na igualdade de direitos de todos os cidadãos perante a lei. O princípio da igualdade entre mulheres e homens sustenta todas as políticas europeias e é a base da integração europeia.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                    <div class="value-card p-4 text-center">
+                        <div class="value-icon">
+                            <i class="fas fa-gavel"></i>
+                        </div>
+                        <h3 class="value-title">Estado de Direito</h3>
+                        <p>A UE baseia-se no Estado de direito. Tudo o que a UE faz assenta em tratados, acordados voluntária e democraticamente pelos seus países da UE. A lei e a justiça são asseguradas por um poder judicial independente.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                    <div class="value-card p-4 text-center">
+                        <div class="value-icon">
+                            <i class="fas fa-hand-holding-heart"></i>
+                        </div>
+                        <h3 class="value-title">Direitos Humanos</h3>
+                        <p>Os direitos humanos são protegidos pela Carta dos Direitos Fundamentais da UE. Estes abrangem o direito à não discriminação com base no sexo, raça ou origem étnica, religião ou crença, deficiência, idade ou orientação sexual.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row mt-5">
+                <div class="col-lg-10 mx-auto">
+                    <div class="erasmus-quote">
+                        "Em 2012, a UE recebeu o Prémio Nobel da Paz pela promoção das causas da paz, da reconciliação, da democracia e dos direitos humanos na Europa."
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="eu-colors-bar"></div>
+
+    <!-- Erasmus+ -->
+    <section id="erasmus" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title text-center">Erasmus+</h2>
+            
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h3 class="mb-4">Enriching lives, opening minds.</h3>
+                    <p class="mb-4">O programa Erasmus+ é o programa da UE para a educação, formação, juventude e desporto. Oferece oportunidades para estudar, fazer formação, adquirir experiência e voluntariado no estrangeiro.</p>
+                    <p>Desde o seu início em 1987, o Erasmus já permitiu a mais de 10 milhões de pessoas estudar, fazer formação ou voluntariado no estrangeiro. O programa contribui para a realização pessoal e profissional dos participantes.</p>
+                </div>
+                <div class="col-lg-6 text-center">
+                    <img src="yellow_EN_logo_RVB.jpg" alt="Erasmus+ Logo" class="img-fluid" style="max-height: 300px;" onerror="this.src='https://via.placeholder.com/300x200/FFCC00/003399?text=Erasmus+Logo'">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="eu-colors-bar"></div>
+
+    <!-- Evento -->
+    <section id="evento" class="py-5">
+        <div class="container">
+            <h2 class="section-title text-center">Erasmus+ Days 2025</h2>
+            
+            <div class="countdown text-center">
+                <h3 class="mb-4">Contagem Decrescente para o Evento</h3>
+                <div class="row justify-content-center">
+                    <div class="col-6 col-md-3">
+                        <div class="countdown-number" id="days">00</div>
+                        <div class="countdown-label">Dias</div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="countdown-number" id="hours">00</div>
+                        <div class="countdown-label">Horas</div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="countdown-number" id="minutes">00</div>
+                        <div class="countdown-label">Minutos</div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="countdown-number" id="seconds">00</div>
+                        <div class="countdown-label">Segundos</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row mt-5">
+                <div class="col-lg-8 mx-auto">
+                    <h3 class="mb-4">Sobre o Evento</h3>
+                    <p>Os Dias Erasmus+ são uma iniciativa europeia que visa promover o programa Erasmus+ em todo o mundo através de eventos organizados pelos escritórios nacionais da agência, antigos participantes, escolas, universidades e outras organizações.</p>
+                    <p>Durante os Dias Erasmus+, milhares de atividades são organizadas em toda a Europa e além-fronteiras para celebrar o programa, partilhar experiências e inspirar futuros participantes.</p>
+                    <p>Junte-se a nós de 13 a 18 de outubro de 2025 para celebrar os valores europeus e o espírito de união que o Erasmus+ representa!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="eu-colors-bar"></div>
+
+    <!-- Depoimentos -->
+    <section id="depoimentos" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title text-center">Depoimentos Erasmus+</h2>
+            <p class="lead text-center mb-5">Experiências e testemunhos de participantes do programa</p>
+            
+            <!-- Painel de Administração (só aparece após login) -->
+            <div id="adminPanel" class="admin-panel d-none">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h4 class="mb-0">Painel de Administração</h4>
+                    <span class="admin-badge">ADMIN</span>
+                </div>
+                <p class="text-muted mb-4">Aqui pode adicionar depoimentos escritos e em vídeo.</p>
+                
+                <!-- Formulários do Admin -->
+                <div class="row">
+                    <div class="col-lg-6 mb-4">
+                        <div class="testimonial-form">
+                            <h5 class="mb-3">Adicionar Depoimento Escrito</h5>
+                            <form id="adminTextForm">
+                                <div class="mb-3">
+                                    <label for="adminName" class="form-label">Nome *</label>
+                                    <input type="text" class="form-control" id="adminName" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="adminCountry" class="form-label">País *</label>
+                                    <input type="text" class="form-control" id="adminCountry" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="adminProgram" class="form-label">Programa Erasmus+ *</label>
+                                    <select class="form-select" id="adminProgram" required>
+                                        <option value="">Selecione o programa</option>
+                                        <option value="Estudo">Estudo</option>
+                                        <option value="Estágio">Estágio</option>
+                                        <option value="Formação">Formação</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="adminRating" class="form-label">Avaliação *</label>
+                                    <select class="form-select" id="adminRating" required>
+                                        <option value="">Selecione a avaliação</option>
+                                        <option value="5">★★★★★ - Excelente</option>
+                                        <option value="4">★★★★☆ - Muito Bom</option>
+                                        <option value="3">★★★☆☆ - Bom</option>
+                                        <option value="2">★★☆☆☆ - Razoável</option>
+                                        <option value="1">★☆☆☆☆ - Fraco</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="adminMessage" class="form-label">Depoimento *</label>
+                                    <textarea class="form-control" id="adminMessage" rows="4" required></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary w-100">Adicionar Depoimento</button>
+                            </form>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-6">
+                        <div class="testimonial-form">
+                            <h5 class="mb-3">Adicionar Depoimento em Vídeo</h5>
+                            <form id="adminVideoForm">
+                                <div class="mb-3">
+                                    <label for="videoTitle" class="form-label">Título do Vídeo *</label>
+                                    <input type="text" class="form-control" id="videoTitle" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="videoUrl" class="form-label">URL do Vídeo (YouTube) *</label>
+                                    <input type="url" class="form-control" id="videoUrl" placeholder="https://www.youtube.com/watch?v=..." required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="videoPerson" class="form-label">Nome da Pessoa</label>
+                                    <input type="text" class="form-control" id="videoPerson">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="videoDescription" class="form-label">Descrição</label>
+                                    <textarea class="form-control" id="videoDescription" rows="3"></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary w-100">Adicionar Vídeo</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mensagem de login necessária -->
+            <div id="loginRequired" class="alert alert-info text-center">
+                <i class="fas fa-info-circle me-2"></i>
+                <strong>Área restrita:</strong> Faça login como administrador para adicionar depoimentos.
+                <button class="btn btn-primary btn-sm ms-2" data-bs-toggle="modal" data-bs-target="#loginModal">
+                    Fazer Login
+                </button>
+            </div>
+            
+            <!-- Tabs para depoimentos -->
+            <ul class="nav nav-tabs" id="testimonialTabs" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="written-tab" data-bs-toggle="tab" data-bs-target="#written" type="button" role="tab">
+                        <i class="fas fa-pen me-2"></i>Depoimentos Escritos
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="video-tab" data-bs-toggle="tab" data-bs-target="#video" type="button" role="tab">
+                        <i class="fas fa-video me-2"></i>Depoimentos em Vídeo
+                    </button>
+                </li>
+            </ul>
+            
+            <div class="tab-content" id="testimonialTabsContent">
+                <!-- Tab: Depoimentos Escritos -->
+                <div class="tab-pane fade show active" id="written" role="tabpanel">
+                    <div id="testimonialsList">
+                        <!-- Depoimentos escritos serão carregados aqui via JavaScript -->
+                    </div>
+                </div>
+                
+                <!-- Tab: Depoimentos em Vídeo -->
+                <div class="tab-pane fade" id="video" role="tabpanel">
+                    <div class="row" id="videoTestimonialsList">
+                        <!-- Vídeos serão carregados aqui via JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="eu-colors-bar"></div>
+
+    <!-- Footer -->
+    <footer id="contato" class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <img src="logo-email.jpg" alt="EPHTL Logo" class="footer-logo" onerror="this.src='https://via.placeholder.com/150x70/003399/FFFFFF?text=EPHTL'">
+                    <p>Escola Profissional de Hotelaria e Turismo de Lisboa</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Contactos</h5>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-envelope me-2"></i>https://www.ephtl.edu.pt/pt</li>
+                        <li><i class="fas fa-phone me-2"></i>+351 210 000 000</li>
+                        <li><i class="fas fa-map-marker-alt me-2"></i>Lisboa, Portugal</li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Siga-nos</h5>
+                    <div class="d-flex gap-3 mt-3">
+                        <a href="https://www.facebook.com/ephtl.lisboa/" class="text-light"><i class="fab fa-facebook fa-2x"></i></a>
+                        <a href="https://www.instagram.com/ephtl_/" class="text-light"><i class="fab fa-instagram fa-2x"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4" style="border-color: rgba(255,255,255,0.1);">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p>&copy; 2025 EPHTL. Todos os direitos reservados.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <img src="yellow_EN_logo_RVB.jpg" alt="Erasmus+ Logo" class="eu-flag" onerror="this.src='https://via.placeholder.com/30x20/FFCC00/003399?text=EU'">
+                    <span>Erasmus+ - Enriching lives, opening minds.</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal de Login -->
+    <div class="modal fade login-modal" id="loginModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Login </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="loginForm">
+                        <div class="mb-3">
+                            <label for="loginUsername" class="form-label">Utilizador</label>
+                            <input type="text" class="form-control" id="loginUsername" value="admin" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="loginPassword" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="loginPassword" value="erasmus2025" required>
+                        </div>
+                        <div class="alert alert-info">
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Entrar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Sistema de Login
+        const ADMIN_CREDENTIALS = {
+            username: 'admin',
+            password: 'erasmus2025'
+        };
+
+        // Verificar se está logado
+        function isLoggedIn() {
+            return localStorage.getItem('adminLoggedIn') === 'true';
+        }
+
+        // Fazer login
+        function login(username, password) {
+            if (username === ADMIN_CREDENTIALS.username && password === ADMIN_CREDENTIALS.password) {
+                localStorage.setItem('adminLoggedIn', 'true');
+                updateUI();
+                return true;
+            }
+            return false;
+        }
+
+        // Fazer logout
+        function logout() {
+            localStorage.removeItem('adminLoggedIn');
+            updateUI();
+        }
+
+        // Atualizar interface conforme login
+        function updateUI() {
+            const isAdmin = isLoggedIn();
+            const adminPanel = document.getElementById('adminPanel');
+            const loginRequired = document.getElementById('loginRequired');
+            const userInfo = document.getElementById('userInfo');
+            const loginBtn = document.getElementById('loginBtn');
+
+            if (isAdmin) {
+                adminPanel.classList.remove('d-none');
+                loginRequired.classList.add('d-none');
+                userInfo.classList.remove('d-none');
+                loginBtn.classList.add('d-none');
+            } else {
+                adminPanel.classList.add('d-none');
+                loginRequired.classList.remove('d-none');
+                userInfo.classList.add('d-none');
+                loginBtn.classList.remove('d-none');
+            }
+        }
+
+        // Arrays para depoimentos
+        let testimonials = [];
+        let videoTestimonials = [];
+
+        // Contagem decrescente para o evento
+        function updateCountdown() {
+            const eventDate = new Date('October 13, 2025 00:00:00').getTime();
+            const now = new Date().getTime();
+            const distance = eventDate - now;
+            
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            
+            document.getElementById('days').innerText = days.toString().padStart(2, '0');
+            document.getElementById('hours').innerText = hours.toString().padStart(2, '0');
+            document.getElementById('minutes').innerText = minutes.toString().padStart(2, '0');
+            document.getElementById('seconds').innerText = seconds.toString().padStart(2, '0');
+        }
+        
+        // Carregar depoimentos escritos
+        function loadTestimonials() {
+            const testimonialsList = document.getElementById('testimonialsList');
+            testimonialsList.innerHTML = '';
+            
+            if (testimonials.length === 0) {
+                testimonialsList.innerHTML = `
+                    <div class="empty-state">
+                        <i class="fas fa-comments"></i>
+                        <h4>Ainda não há depoimentos escritos</h4>
+                    </div>
+                `;
+                return;
+            }
+            
+            testimonials.forEach(testimonial => {
+                const stars = '★'.repeat(testimonial.rating) + '☆'.repeat(5 - testimonial.rating);
+                
+                const testimonialHTML = `
+                    <div class="testimonial-card mb-4">
+                        <div class="testimonial-header">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h5 class="mb-0">${testimonial.name}</h5>
+                                <div class="testimonial-rating">${stars}</div>
+                            </div>
+                            <div class="d-flex mt-2">
+                                <span class="badge bg-light text-dark me-2">${testimonial.country}</span>
+                                <span class="badge bg-light text-dark">${testimonial.program}</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">"${testimonial.message}"</p>
+                            <div class="text-muted small">${testimonial.date}</div>
+                        </div>
+                    </div>
+                `;
+                
+                testimonialsList.innerHTML += testimonialHTML;
+            });
+        }
+        
+        // Carregar vídeos
+        function loadVideoTestimonials() {
+            const videoList = document.getElementById('videoTestimonialsList');
+            videoList.innerHTML = '';
+            
+            if (videoTestimonials.length === 0) {
+                videoList.innerHTML = `
+                    <div class="col-12">
+                        <div class="empty-state">
+                            <i class="fas fa-video"></i>
+                            <h4>Ainda não há vídeos de depoimentos</h4>
+                            <p>Faça login como administrador para adicionar o primeiro vídeo.</p>
+                        </div>
+                    </div>
+                `;
+                return;
+            }
+            
+            videoTestimonials.forEach(video => {
+                const videoHTML = `
+                    <div class="col-lg-6 mb-4">
+                        <div class="video-testimonial">
+                            <div class="ratio ratio-16x9">
+                                <iframe src="${video.url}" title="${video.title}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                            <div class="p-3 bg-white">
+                                <h5>${video.title}</h5>
+                                ${video.person ? `<p class="mb-1"><strong>Por:</strong> ${video.person}</p>` : ''}
+                                <p class="text-muted mb-2">${video.description}</p>
+                                <div class="text-muted small">${video.date}</div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                
+                videoList.innerHTML += videoHTML;
+            });
+        }
+        
+        // Adicionar novo depoimento escrito (admin)
+        document.getElementById('adminTextForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            if (!isLoggedIn()) {
+                alert('Precisa de fazer login para adicionar depoimentos!');
+                return;
+            }
+            
+            const name = document.getElementById('adminName').value;
+            const country = document.getElementById('adminCountry').value;
+            const program = document.getElementById('adminProgram').value;
+            const rating = document.getElementById('adminRating').value;
+            const message = document.getElementById('adminMessage').value;
+            
+            const newTestimonial = {
+                id: testimonials.length + 1,
+                name: name,
+                country: country,
+                program: program,
+                rating: parseInt(rating),
+                message: message,
+                date: new Date().toLocaleDateString('pt-PT', { day: 'numeric', month: 'short', year: 'numeric' })
+            };
+            
+            testimonials.unshift(newTestimonial);
+            loadTestimonials();
+            
+            // Limpar formulário
+            document.getElementById('adminTextForm').reset();
+            
+            // Mostrar mensagem de sucesso
+            alert('Depoimento adicionado com sucesso!');
+        });
+        
+        // Adicionar novo vídeo (admin)
+        document.getElementById('adminVideoForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            if (!isLoggedIn()) {
+                alert('Precisa de fazer login para adicionar vídeos!');
+                return;
+            }
+            
+            const title = document.getElementById('videoTitle').value;
+            const url = document.getElementById('videoUrl').value;
+            const person = document.getElementById('videoPerson').value;
+            const description = document.getElementById('videoDescription').value;
+            
+            // Converter URL do YouTube para embed
+            let embedUrl = url;
+            if (url.includes('youtube.com/watch?v=')) {
+                const videoId = url.split('v=')[1];
+                const ampersandPosition = videoId.indexOf('&');
+                if (ampersandPosition !== -1) {
+                    embedUrl = `https://www.youtube.com/embed/${videoId.substring(0, ampersandPosition)}`;
+                } else {
+                    embedUrl = `https://www.youtube.com/embed/${videoId}`;
+                }
+            } else if (url.includes('youtu.be/')) {
+                const videoId = url.split('youtu.be/')[1];
+                embedUrl = `https://www.youtube.com/embed/${videoId}`;
+            }
+            
+            const newVideo = {
+                id: videoTestimonials.length + 1,
+                title: title,
+                url: embedUrl,
+                person: person || '',
+                description: description || 'Sem descrição',
+                date: new Date().toLocaleDateString('pt-PT', { day: 'numeric', month: 'short', year: 'numeric' })
+            };
+            
+            videoTestimonials.unshift(newVideo);
+            loadVideoTestimonials();
+            
+            // Limpar formulário
+            document.getElementById('adminVideoForm').reset();
+            
+            // Mostrar mensagem de sucesso
+            alert('Vídeo adicionado com sucesso!');
+            
+            // Mudar para a tab de vídeos
+            const videoTab = new bootstrap.Tab(document.getElementById('video-tab'));
+            videoTab.show();
+        });
+
+        // Login form
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const username = document.getElementById('loginUsername').value;
+            const password = document.getElementById('loginPassword').value;
+            
+            if (login(username, password)) {
+                const modal = bootstrap.Modal.getInstance(document.getElementById('loginModal'));
+                modal.hide();
+                alert('Login bem-sucedido! Agora pode adicionar depoimentos.');
+            } else {
+                alert('Credenciais inválidas! Tente novamente.');
+            }
+        });
+        
+        // Smooth scrolling para âncoras
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Inicialização
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+        loadTestimonials();
+        loadVideoTestimonials();
+        updateUI(); // Verificar estado de login ao carregar a página
+    </script>
+</body>
+</html>
