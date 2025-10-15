@@ -129,13 +129,6 @@
             transform: translateY(-5px);
         }
         
-        .testimonial-form {
-            background-color: white;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-            padding: 30px;
-        }
-        
         .video-testimonial {
             position: relative;
             border-radius: 15px;
@@ -148,23 +141,6 @@
             border-radius: 15px;
             max-height: 300px;
             object-fit: cover;
-        }
-        
-        .admin-panel {
-            background-color: #f8f9fa;
-            border: 2px dashed var(--eu-blue);
-            border-radius: 15px;
-            padding: 25px;
-            margin-bottom: 30px;
-        }
-        
-        .admin-badge {
-            background-color: var(--eu-gold);
-            color: var(--eu-blue);
-            font-weight: bold;
-            padding: 5px 10px;
-            border-radius: 5px;
-            font-size: 0.8rem;
         }
         
         .tab-content {
@@ -186,40 +162,6 @@
             color: white;
             border: none;
             border-radius: 10px 10px 0 0;
-        }
-        
-        .empty-state {
-            text-align: center;
-            padding: 40px 20px;
-            color: #6c757d;
-        }
-        
-        .empty-state i {
-            font-size: 4rem;
-            margin-bottom: 20px;
-            opacity: 0.5;
-        }
-        
-        .login-modal .modal-content {
-            border-radius: 15px;
-            border: none;
-        }
-        
-        .login-btn {
-            background-color: var(--eu-blue);
-            border: none;
-            border-radius: 50px;
-            padding: 10px 25px;
-            color: white;
-            font-weight: 500;
-        }
-        
-        .user-badge {
-            background-color: var(--eu-gold);
-            color: var(--eu-blue);
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-weight: 500;
         }
         
         .quiz-card {
@@ -245,58 +187,9 @@
             margin-bottom: 15px;
         }
         
-        .video-item {
-            position: relative;
-        }
-        
-        .delete-video-btn {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            background-color: rgba(231, 76, 60, 0.9);
-            border: none;
-            border-radius: 50%;
-            width: 35px;
-            height: 35px;
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 10;
-            cursor: pointer;
-        }
-        
-        .upload-area {
-            border: 2px dashed #ccc;
-            border-radius: 10px;
-            padding: 30px;
-            text-align: center;
-            background-color: #f8f9fa;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-        
-        .upload-area:hover {
-            border-color: var(--eu-blue);
-            background-color: #e9ecef;
-        }
-        
-        .upload-area.dragover {
-            border-color: var(--eu-blue);
-            background-color: #e3f2fd;
-        }
-        
-        .video-preview {
-            max-width: 100%;
-            max-height: 200px;
-            margin-top: 15px;
-            display: none;
-            border-radius: 8px;
-        }
-        
-        /* FOTO DE FUNDO DA PRIMEIRA PARTE - TROQUE AQUI A FOTO */
+        /* FOTO DE FUNDO DA PRIMEIRA PARTE */
         .poster-container {
-            background-image: url('WhatsApp\ Image\ 2025-10-13\ at\ 16.06.47\ \(1\).jpeg'); /* TROQUE AQUI O NOME DA FOTO */
+            background-image: url('WhatsApp Image 2025-10-13 at 16.07.54.jpeg');
             background-size: cover;
             background-position: center;
             width: 100%;
@@ -400,29 +293,6 @@
             object-fit: cover;
         }
 
-        .delete-photo-btn {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            background-color: rgba(231, 76, 60, 0.9);
-            border: none;
-            border-radius: 50%;
-            width: 30px;
-            height: 30px;
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 10;
-            cursor: pointer;
-            opacity: 0;
-            transition: opacity 0.3s;
-        }
-
-        .photo-item:hover .delete-photo-btn {
-            opacity: 1;
-        }
-
         .event-info-card {
             background: linear-gradient(135deg, var(--eu-blue), var(--light-blue));
             color: white;
@@ -430,6 +300,13 @@
             padding: 30px;
             margin: 40px 0;
             text-align: center;
+        }
+
+        .testimonial-form {
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            padding: 30px;
         }
 
         @media (max-width: 768px) {
@@ -466,14 +343,15 @@
 </head>
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
-        <div class="container">
-            <a class="navbar-brand" href="#">
-                <img src="logo-email.jpg" alt="EPHTL Logo" onerror="this.src='https://via.placeholder.com/150x50/003399/FFFFFF?text=EPHTL+Logo'">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light sticky-top">
+    <div class="container">
+        <a class="navbar-brand" href="#">
+            <img src="logo-email.jpg" alt="EPHTL Logo" height="50">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item"><a class="nav-link" href="#valores">Valores da UE</a></li>
@@ -483,22 +361,6 @@
                     <li class="nav-item"><a class="nav-link" href="#depoimentos">Depoimentos</a></li>
                     <li class="nav-item"><a class="nav-link" href="#quizzes">Quizzes</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contato">Contactos</a></li>
-                </ul>
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <span id="userInfo" class="d-none">
-                            <span class="user-badge me-2">
-                                <i class="fas fa-user me-1"></i>
-                                <span id="userName">Admin</span>
-                            </span>
-                            <button class="btn btn-outline-danger btn-sm" onclick="logout()">
-                                <i class="fas fa-sign-out-alt"></i>
-                            </button>
-                        </span>
-                        <button id="loginBtn" class="btn login-btn" data-bs-toggle="modal" data-bs-target="#loginModal">
-                            <i class="fas fa-sign-in-alt me-2"></i>Login 
-                        </button>
-                    </li>
                 </ul>
             </div>
         </div>
@@ -610,7 +472,7 @@
                     <p>Desde o seu início em 1987, o Erasmus já permitiu a mais de 10 milhões de pessoas estudar, fazer formação ou voluntariado no estrangeiro. O programa contribui para a realização pessoal e profissional dos participantes.</p>
                 </div>
                 <div class="col-lg-6 text-center">
-                    <img src="yellow_EN_logo_RVB.jpg" alt="Erasmus+ Logo" class="img-fluid" style="max-height: 300px;" onerror="this.src='https://via.placeholder.com/300x200/FFCC00/003399?text=Erasmus+Logo'">
+                    <img src="yellow_EN_logo_RVB.jpg" alt="Erasmus+ Logo" class="img-fluid" style="max-height: 300px;">
                 </div>
             </div>
         </div>
@@ -657,112 +519,150 @@
     </section>
 
     <div class="eu-colors-bar"></div>
-
-    <!-- Atividades da Semana -->
-    <section id="atividades" class="py-5 bg-light">
-        <div class="container">
-            <h2 class="section-title text-center">Atividades da Semana Erasmus+</h2>
-            <p class="lead text-center mb-5">Registos fotográficos das atividades realizadas durante a semana Erasmus+</p>
-            
-            <!-- Painel de Administração (só aparece após login) -->
-            <div id="adminPanelAtividades" class="admin-panel d-none">
-                <div class="d-flex justify-content-between align-items-center mb-3">
-                    <h4 class="mb-0">Painel de Administração - Atividades</h4>
-                    <span class="admin-badge">ADMIN</span>
-                </div>
-                <p class="text-muted mb-4">Aqui pode adicionar e remover fotos das atividades.</p>
-                
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="testimonial-form">
-                            <h5 class="mb-3">Adicionar Foto de Atividade</h5>
-                            <form id="adminPhotoForm">
-                                <div class="mb-3">
-                                    <label for="photoTitle" class="form-label">Título da Foto *</label>
-                                    <input type="text" class="form-control" id="photoTitle" required>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="photoDescription" class="form-label">Descrição</label>
-                                    <textarea class="form-control" id="photoDescription" rows="3"></textarea>
-                                </div>
-                                <div class="mb-3">
-                                    <label class="form-label">Upload da Foto *</label>
-                                    <div class="upload-area" id="uploadPhotoArea">
-                                        <i class="fas fa-cloud-upload-alt fa-3x mb-3 text-muted"></i>
-                                        <p>Clique ou arraste um ficheiro de imagem aqui</p>
-                                        <small class="text-muted">Formatos suportados: JPG, PNG, GIF</small>
-                                        <input type="file" id="photoFile" accept="image/*" class="d-none">
-                                        <img id="photoPreview" class="video-preview" alt="Pré-visualização da foto">
-                                    </div>
-                                </div>
-                                <button type="submit" class="btn btn-primary w-100">Adicionar Foto</button>
-                            </form>
-                        </div>
+        
+<!-- Atividades da Semana -->
+<section id="atividades" class="py-5 bg-light">
+    <div class="container">
+        <h2 class="section-title text-center">Atividades da Semana Erasmus+</h2>
+        <p class="lead text-center mb-5">Registos fotográficos das atividades realizadas durante a semana Erasmus+</p>
+        
+        <!-- Galeria de Fotos -->
+        <div class="row g-4" id="atividadesGallery">
+            <div class="col-12 col-sm-6 col-lg-3">
+                <div class="photo-card">
+                    <div class="photo-wrapper">
+                        <img src="WhatsApp Image 2025-10-13 at 21.13.38 (1).jpeg" alt="Workshop sobre valores europeus" class="photo-img">
+                    </div>
+                    <div class="photo-content">
+                        <h5 class="photo-title">Iniciativas</h5>
                     </div>
                 </div>
             </div>
             
-            <!-- Galeria de Fotos -->
-            <div class="photo-gallery" id="atividadesGallery">
-                <!-- Fotos serão carregadas aqui via JavaScript -->
-                <div class="empty-state">
-                    <i class="fas fa-images"></i>
-                    <h4>Nenhuma foto disponível</h4>
-                    <p>Faça login como administrador para adicionar fotos das atividades.</p>
+            <div class="col-12 col-sm-6 col-lg-3">
+                <div class="photo-card">
+                    <div class="photo-wrapper">
+                        <img src="WhatsApp Image 2025-10-13 at 16.06.13 (1).jpeg" alt="Debate sobre o futuro da Europa" class="photo-img">
+                    </div>
+                    <div class="photo-content">
+                        <h5 class="photo-title">Iniciativas</h5>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-12 col-sm-6 col-lg-3">
+                <div class="photo-card">
+                    <div class="photo-wrapper">
+                        <img src="WhatsApp Image 2025-10-13 at 16.06.41.jpeg" alt="Sessão de networking" class="photo-img">
+                    </div>
+                    <div class="photo-content">
+                        <h5 class="photo-title">Iniciativas</h5>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-12 col-sm-6 col-lg-3">
+                <div class="photo-card">
+                    <div class="photo-wrapper">
+                        <img src="WhatsApp Image 2025-10-13 at 16.06.13.jpeg" alt="Atividade de grupo" class="photo-img">
+                    </div>
+                    <div class="photo-content">
+                        <h5 class="photo-title">Iniciativas</h5>
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <div class="eu-colors-bar"></div>
+<style>
+.photo-card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
 
+.photo-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.photo-wrapper {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.photo-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.photo-card:hover .photo-img {
+    transform: scale(1.05);
+}
+
+.photo-content {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.photo-title {
+    color: #003399;
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    line-height: 1.3;
+}
+
+.photo-description {
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin-bottom: 0;
+    flex-grow: 1;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .photo-wrapper {
+        height: 180px;
+    }
+    
+    .photo-content {
+        padding: 15px;
+    }
+    
+    .photo-title {
+        font-size: 1rem;
+    }
+    
+    .photo-description {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .photo-wrapper {
+        height: 160px;
+    }
+}
+</style>
     <!-- Depoimentos -->
     <section id="depoimentos" class="py-5">
         <div class="container">
             <h2 class="section-title text-center">Depoimentos Erasmus+</h2>
             <p class="lead text-center mb-5">Experiências e testemunhos de participantes do programa</p>
-            
-            <!-- Painel de Administração (só aparece após login) -->
-            <div id="adminPanel" class="admin-panel d-none">
-                <div class="d-flex justify-content-between align-items-center mb-3">
-                    <h4 class="mb-0">Painel de Administração</h4>
-                    <span class="admin-badge">ADMIN</span>
-                </div>
-                <p class="text-muted mb-4">Aqui pode adicionar e remover depoimentos em vídeo.</p>
-                
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="testimonial-form">
-                            <h5 class="mb-3">Adicionar Depoimento em Vídeo</h5>
-                            <form id="adminVideoForm">
-                                <div class="mb-3">
-                                    <label for="videoTitle" class="form-label">Título do Vídeo *</label>
-                                    <input type="text" class="form-control" id="videoTitle" required>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="videoPerson" class="form-label">Nome da Pessoa</label>
-                                    <input type="text" class="form-control" id="videoPerson">
-                                </div>
-                                <div class="mb-3">
-                                    <label for="videoDescription" class="form-label">Descrição</label>
-                                    <textarea class="form-control" id="videoDescription" rows="3"></textarea>
-                                </div>
-                                <div class="mb-3">
-                                    <label class="form-label">Upload do Vídeo *</label>
-                                    <div class="upload-area" id="uploadArea">
-                                        <i class="fas fa-cloud-upload-alt fa-3x mb-3 text-muted"></i>
-                                        <p>Clique ou arraste um ficheiro de vídeo aqui</p>
-                                        <small class="text-muted">Formatos suportados: MP4, WebM, OGG</small>
-                                        <input type="file" id="videoFile" accept="video/*" class="d-none">
-                                        <video id="videoPreview" class="video-preview" controls></video>
-                                    </div>
-                                </div>
-                                <button type="submit" class="btn btn-primary w-100">Adicionar Vídeo</button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
             
             <!-- Tabs para depoimentos -->
             <ul class="nav nav-tabs mb-4" id="testimonialTabs" role="tablist">
@@ -777,12 +677,33 @@
                 <!-- Tab: Depoimentos em Vídeo -->
                 <div class="tab-pane fade show active" id="video" role="tabpanel">
                     <div class="row" id="videoTestimonialsList">
-                        <!-- Vídeos serão carregados aqui via JavaScript -->
-                        <div class="col-12">
-                            <div class="empty-state">
-                                <i class="fas fa-video-slash"></i>
-                                <h4>Nenhum vídeo disponível</h4>
-                                <p>Faça login como administrador para adicionar vídeos.</p>
+                        <div class="col-md-6 col-lg-4 mb-4">
+                            <div class="testimonial-card">
+                                <div class="video-testimonial">
+                                    <div class="ratio ratio-16x9">
+                                        <iframe src="WhatsApp Video 2025-10-14 at 17.43.43.mp4" title="Depoimento Erasmus+" allowfullscreen></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6 col-lg-4 mb-4">
+                            <div class="testimonial-card">
+                                <div class="video-testimonial">
+                                    <div class="ratio ratio-16x9">
+                                        <iframe src="WhatsApp Video 2025-10-07 at 17.07.56.mp4" title="Depoimento Erasmus+" allowfullscreen></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6 col-lg-4 mb-4">
+                            <div class="testimonial-card">
+                                <div class="video-testimonial">
+                                    <div class="ratio ratio-16x9">
+                                        <iframe src="WhatsApp Video 2025-10-14 at 22.26.04.mp4" title="Depoimento Erasmus+" allowfullscreen></iframe>
+                                <div class="card-body"> 
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -919,7 +840,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 mb-4 mb-lg-0">
-                    <img src="logo-email.jpg" alt="EPHTL Logo" class="footer-logo" onerror="this.src='https://via.placeholder.com/150x50/FFFFFF/003399?text=EPHTL+Logo'">
+                    <img src="logo-email.jpg"EPHTL Logo" class="footer-logo">
                     <p>A Escola Profissional de Hotelaria e Turismo de Lisboa é uma instituição de ensino profissional dedicada à formação de profissionais qualificados para o setor da hotelaria e turismo.</p>
                 </div>
                 
@@ -941,13 +862,8 @@
                         <a href="https://www.facebook.com/ephtl.lisboa/" class="text-white me-3 fs-4"><i class="fab fa-facebook"></i></a>
                         <a href="https://www.instagram.com/ephtl_/" class="text-white me-3 fs-4"><i class="fab fa-instagram"></i></a>
                     </div>
-                    
-                    <div class="mt-4">
-                        <img src="yellow_EN_logo_RVB.jpg" alt="Erasmus+ Logo" class="img-fluid" style="max-height: 60px;" onerror="this.src='https://via.placeholder.com/150x50/FFCC00/003399?text=Erasmus+Logo'">
-                    </div>
                 </div>
             </div>
-            
             <hr class="my-4 bg-light">
             
             <div class="row">
@@ -958,246 +874,13 @@
         </div>
     </footer>
 
-    <!-- Modal de Login -->
-    <div class="modal fade" id="loginModal" tabindex="-1">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content login-modal">
-                <div class="modal-header">
-                    <h5 class="modal-title">Acesso Administrativo</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                </div>
-                <div class="modal-body">
-                    <form id="loginForm">
-                        <div class="mb-3">
-                            <label for="username" class="form-label">Nome de utilizador</label>
-                            <input type="text" class="form-control" id="username" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="password" class="form-label">Palavra-passe</label>
-                            <input type="password" class="form-control" id="password" required>
-                        </div>
-                        <button type="submit" class="btn btn-primary w-100">Entrar</button>
-                    </form>
-                    <div class="mt-3 text-center">
-                        <small class="text-muted">Utilize "admin" como nome de utilizador e palavra-passe para aceder</small>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        // Sistema de login
-        document.getElementById('loginForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const username = document.getElementById('username').value;
-            const password = document.getElementById('password').value;
-            
-            if (username === 'admin' && password === 'admin') {
-                document.getElementById('userInfo').classList.remove('d-none');
-                document.getElementById('loginBtn').classList.add('d-none');
-                document.getElementById('adminPanel').classList.remove('d-none');
-                document.getElementById('adminPanelAtividades').classList.remove('d-none');
-                
-                // Fechar modal
-                const loginModal = bootstrap.Modal.getInstance(document.getElementById('loginModal'));
-                loginModal.hide();
-                
-                // Mostrar mensagem de sucesso
-                alert('Login efetuado com sucesso! Agora tem acesso ao painel de administração.');
-            } else {
-                alert('Nome de utilizador ou palavra-passe incorretos. Tente novamente.');
-            }
-        });
-        
-        function logout() {
-            document.getElementById('userInfo').classList.add('d-none');
-            document.getElementById('loginBtn').classList.remove('d-none');
-            document.getElementById('adminPanel').classList.add('d-none');
-            document.getElementById('adminPanelAtividades').classList.add('d-none');
-            
-            // Limpar formulários
-            document.getElementById('loginForm').reset();
-            document.getElementById('adminVideoForm').reset();
-            document.getElementById('adminPhotoForm').reset();
-            
-            alert('Sessão terminada com sucesso.');
-        }
-        
-        // Sistema de upload de vídeos
-        document.getElementById('uploadArea').addEventListener('click', function() {
-            document.getElementById('videoFile').click();
-        });
-        
-        document.getElementById('videoFile').addEventListener('change', function(e) {
-            const file = e.target.files[0];
-            if (file) {
-                const videoPreview = document.getElementById('videoPreview');
-                const url = URL.createObjectURL(file);
-                videoPreview.src = url;
-                videoPreview.style.display = 'block';
-            }
-        });
-        
-        // Sistema de upload de fotos
-        document.getElementById('uploadPhotoArea').addEventListener('click', function() {
-            document.getElementById('photoFile').click();
-        });
-        
-        document.getElementById('photoFile').addEventListener('change', function(e) {
-            const file = e.target.files[0];
-            if (file) {
-                const photoPreview = document.getElementById('photoPreview');
-                const url = URL.createObjectURL(file);
-                photoPreview.src = url;
-                photoPreview.style.display = 'block';
-            }
-        });
-        
-        // Adicionar vídeo
-        document.getElementById('adminVideoForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const title = document.getElementById('videoTitle').value;
-            const person = document.getElementById('videoPerson').value;
-            const description = document.getElementById('videoDescription').value;
-            const videoFile = document.getElementById('videoFile').files[0];
-            
-            if (!videoFile) {
-                alert('Por favor, selecione um ficheiro de vídeo.');
-                return;
-            }
-            
-            const videoUrl = URL.createObjectURL(videoFile);
-            
-            // Criar elemento de vídeo
-            const videoElement = document.createElement('div');
-            videoElement.className = 'col-md-6 col-lg-4 mb-4 video-item';
-            videoElement.innerHTML = `
-                <div class="testimonial-card">
-                    <div class="delete-video-btn" onclick="deleteVideo(this)">
-                        <i class="fas fa-times"></i>
-                    </div>
-                    <div class="video-testimonial">
-                        <video controls style="width: 100%;">
-                            <source src="${videoUrl}" type="${videoFile.type}">
-                            O seu navegador não suporta vídeos HTML5.
-                        </video>
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title">${title}</h5>
-                        ${person ? `<p class="card-text"><strong>${person}</strong></p>` : ''}
-                        <p class="card-text">${description}</p>
-                    </div>
-                </div>
-            `;
-            
-            document.getElementById('videoTestimonialsList').appendChild(videoElement);
-            
-            // Limpar formulário
-            document.getElementById('adminVideoForm').reset();
-            document.getElementById('videoPreview').style.display = 'none';
-            
-            alert('Vídeo adicionado com sucesso!');
-        });
-        
-        // Adicionar foto
-        document.getElementById('adminPhotoForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const title = document.getElementById('photoTitle').value;
-            const description = document.getElementById('photoDescription').value;
-            const photoFile = document.getElementById('photoFile').files[0];
-            
-            if (!photoFile) {
-                alert('Por favor, selecione um ficheiro de imagem.');
-                return;
-            }
-            
-            const photoUrl = URL.createObjectURL(photoFile);
-            
-            // Criar elemento de foto
-            const photoElement = document.createElement('div');
-            photoElement.className = 'photo-item';
-            photoElement.innerHTML = `
-                <div class="delete-photo-btn" onclick="deletePhoto(this)">
-                    <i class="fas fa-times"></i>
-                </div>
-                <img src="${photoUrl}" alt="${title}">
-                <div class="photo-info p-3">
-                    <h6>${title}</h6>
-                    ${description ? `<p class="small mb-0">${description}</p>` : ''}
-                </div>
-            `;
-            
-            document.getElementById('atividadesGallery').appendChild(photoElement);
-            
-            // Limpar formulário
-            document.getElementById('adminPhotoForm').reset();
-            document.getElementById('photoPreview').style.display = 'none';
-            
-            alert('Foto adicionada com sucesso!');
-        });
-        
-        // Função para eliminar vídeo
-        function deleteVideo(element) {
-            if (confirm('Tem a certeza que deseja eliminar este vídeo?')) {
-                element.closest('.video-item').remove();
-            }
-        }
-        
-        // Função para eliminar foto
-        function deletePhoto(element) {
-            if (confirm('Tem a certeza que deseja eliminar esta foto?')) {
-                element.closest('.photo-item').remove();
-            }
-        }
-        
         // Formulário de contacto
         document.getElementById('contactForm').addEventListener('submit', function(e) {
             e.preventDefault();
             alert('Obrigado pela sua mensagem! Entraremos em contacto brevemente.');
             document.getElementById('contactForm').reset();
-        });
-        
-        // Adicionar funcionalidade de drag and drop para upload
-        function handleDragOver(e) {
-            e.preventDefault();
-            e.currentTarget.classList.add('dragover');
-        }
-        
-        function handleDragLeave(e) {
-            e.preventDefault();
-            e.currentTarget.classList.remove('dragover');
-        }
-        
-        function handleDrop(e) {
-            e.preventDefault();
-            e.currentTarget.classList.remove('dragover');
-            
-            const files = e.dataTransfer.files;
-            if (files.length > 0) {
-                if (e.currentTarget.id === 'uploadArea') {
-                    document.getElementById('videoFile').files = files;
-                    const event = new Event('change');
-                    document.getElementById('videoFile').dispatchEvent(event);
-                } else if (e.currentTarget.id === 'uploadPhotoArea') {
-                    document.getElementById('photoFile').files = files;
-                    const event = new Event('change');
-                    document.getElementById('photoFile').dispatchEvent(event);
-                }
-            }
-        }
-        
-        // Aplicar eventos de drag and drop
-        const uploadArea = document.getElementById('uploadArea');
-        const uploadPhotoArea = document.getElementById('uploadPhotoArea');
-        
-        [uploadArea, uploadPhotoArea].forEach(area => {
-            area.addEventListener('dragover', handleDragOver);
-            area.addEventListener('dragleave', handleDragLeave);
-            area.addEventListener('drop', handleDrop);
         });
     </script>
 </body>
